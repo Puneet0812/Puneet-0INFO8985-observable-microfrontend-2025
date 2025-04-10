@@ -28,4 +28,4 @@ This is a group project.
 |||
 |total|10|
 
-Hand in a .zip of your repository, including the screen shot of the credential error in signoz and the printed .pdf ot your working email.
+Hand in a .zip of your repository, including the screen shot of the credential error in signoz and the printed .pdf of your email from the contact form.
