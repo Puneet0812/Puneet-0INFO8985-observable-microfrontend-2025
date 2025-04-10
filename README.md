@@ -1,5 +1,5 @@
-# INFO8985-observable-monolith
-Observable Wordpress
+# INFO8985-observable-microfrontend
+Observable Wordpress with a contact form microfrontend
 
 ```bash
 npm run postinstall
@@ -12,7 +12,7 @@ I also used this for a demo I was doing. To do this, I added an nginx proxy in t
 
 ## Assignment
 
-A provider of a public service mesh needs this instrumented for billing. Please find a way to set the OTEL_SERVICE_NAME in `wordpress/docker-compose.yml` to have your repository name and github name in it. Please find a metric that can be used to determine the total compute time for this service.
+Even a pamphlet wordpress site needs a method to contact the business. This assignment is to make a wordpress site with a microfrontend contact form based on [this github](https://github.com/rhildred/contact-form). You will also use [this repository](https://github.com/conestogac-acsit/cdevops-microfrontend) to include your contact form microfrontend custom element. Take a close look at `toster.sh`, `app.py` and the `src` folder.
 
 ## Marking
 
@@ -21,15 +21,11 @@ This is a group project.
 |Item|Out Of|
 |--|--:|
 |get wordpress up and running from the wp-content folder|2|
-|agree on an idea for your site and each team-member add 1 post|2|
-|deploy on gh-pages|2|
-|change the OTEL_SERVICE_NAME as in the requirements|2|
-|identify a metric that can be used for the total compute time for your wordpress container|2|
+|get the contact form up and running from [the github](https://github.com/rhildred/contact-form) in your contact-form folder|2|
+|use [this repository](https://github.com/conestogac-acsit/cdevops-microfrontend) to instrument your contact form|2|
+|find and screenshot the error in signoz when the contact service doesn't have credentials for sendgrid|2|
+|signup for sendgrid, get credentials, send someone on the team an email from the contact form and print as a pdf|2|
 |||
 |total|10|
 
-* Hints:
-1) There is a workflow in the .github folder to deploy on gh-pages. You need to set the folder name of your project in the package.json file, and update the pages settings so that it deploys properly. You can use the script that sets the sitename for that.
-2) you can get your sitename by doing `pwd` and manipulating that. It is also in `.git/config`.
-
-I hope that this is fun!
+Hand in a .zip of your repository, including the screen shot of the credential error in signoz and the printed .pdf ot your working email.
