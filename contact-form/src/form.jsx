@@ -7,6 +7,7 @@ export function SubscriberForm() {
         const serviceUrl = import.meta.url.replace("index.js", "");
         fetch(`${serviceUrl}email`, {method:"post", headers: {
           "Content-Type": "application/json",
+          "Origin":location.origin
         }, body:JSON.stringify(formObject)}).then((res)=>{
           res.json().then((oResponse) => {
             console.log(oResponse);
