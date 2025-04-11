@@ -4,6 +4,15 @@ export function SubscriberForm() {
         const formData = new FormData(event.target);
         const formObject = Object.fromEntries(formData.entries());
         console.log(formObject);
+        const serviceUrl = import.meta.url.replace("index.js", "");
+        fetch(`${serviceUrl}email`, {method:"post", headers: {
+          "Content-Type": "application/json",
+        }, body:JSON.stringify(formObject)}).then((res)=>{
+          res.json().then((oResponse) => {
+            console.log(oResponse);
+            alert(`response: ${JSON.stringify(oResponse)}`);
+          });
+        })
     }}>
       <label>
         name

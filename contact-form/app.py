@@ -14,6 +14,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.post("/email")
+async def email(request: Request):
+    response = await request.json()
+    print(response)
+    return response
+
 app.mount('/', StaticFiles(directory="./dist", html=True), name="src")
 
 if __name__ == "__main__":
