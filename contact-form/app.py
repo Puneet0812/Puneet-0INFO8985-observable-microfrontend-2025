@@ -32,9 +32,10 @@ async def email(request: Request):
     try:
         sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
         response = sg.send(message)
+        return response
     except Exception as e:
         return e
-    return response
+    
 
 app.mount('/', StaticFiles(directory="./dist", html=True), name="src")
 
