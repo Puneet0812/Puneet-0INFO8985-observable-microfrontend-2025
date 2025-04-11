@@ -1,8 +1,11 @@
 # INFO8985-observable-microfrontend
 Observable Wordpress with a contact form microfrontend
 
+*Note:* SUPER IMPORTANT to make the custom element port public if you are running this and consuming from a codespace
+
+![screenshot](contact-form/readme_images/public.png)
+
 ```bash
-npm run postinstall
 docker compose up -d
 ```
 
