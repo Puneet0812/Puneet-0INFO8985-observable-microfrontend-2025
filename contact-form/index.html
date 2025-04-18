@@ -1,14 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Preact</title>
-  </head>
-  <body>
-    <h1>Subscribe</h1>
-    <x-subscriberform></x-subscriberform>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us</title>
+
+  <!-- Optional: Reset base styles via PicoCSS for clean layout -->
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.5.10/css/pico.min.css">
+
+  <!-- Web component logic -->
+  <script type="module" src="index.js"></script>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #ffffff; /* White background */
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    main {
+      max-width: 600px;
+      width: 100%;
+      padding: 2rem;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #007bff; /* Blue title */
+      margin-bottom: 1.5rem;
+    }
+
+    input, textarea, select {
+      background-color: #f0f0f0 !important; /* Light gray inputs */
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #28a745 !important; /* Green button */
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    #status {
+      text-align: center;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h2>Subscribe</h2>
+    <contact-form></contact-form>
+  </main>
+</body>
 </html>
